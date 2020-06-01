@@ -32,6 +32,9 @@ public class stackGUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         note = new javax.swing.JLabel();
+        cek = new javax.swing.JLabel();
+        pop = new javax.swing.JLabel();
+        inputcd = new javax.swing.JTextField();
         top = new javax.swing.JLabel();
         ar = new javax.swing.JLabel();
         vary = new javax.swing.JTextField();
@@ -42,8 +45,8 @@ public class stackGUI extends javax.swing.JFrame {
         var3 = new javax.swing.JTextField();
         var1 = new javax.swing.JTextField();
         var2 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        layer = new javax.swing.JLabel();
+        bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -54,6 +57,9 @@ public class stackGUI extends javax.swing.JFrame {
         note.setForeground(new java.awt.Color(0, 0, 128));
         note.setText("FULL");
         jPanel1.add(note, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 210, -1, -1));
+        jPanel1.add(cek, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 420, 50));
+        jPanel1.add(pop, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 250, 60));
+        jPanel1.add(inputcd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 120, 50));
         jPanel1.add(top, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, 270, 40));
         jPanel1.add(ar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 270, 40));
 
@@ -81,11 +87,11 @@ public class stackGUI extends javax.swing.JFrame {
         var2.setEditable(false);
         jPanel1.add(var2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 200, 60, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stack/layer.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        layer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stack/layer2.png"))); // NOI18N
+        jPanel1.add(layer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stack/bg.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stack/bg2.jpg"))); // NOI18N
+        jPanel1.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 610));
 
@@ -129,10 +135,13 @@ public class stackGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel bg;
+    private javax.swing.JLabel cek;
+    private javax.swing.JTextField inputcd;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel layer;
     private javax.swing.JLabel note;
+    private javax.swing.JLabel pop;
     private javax.swing.JLabel top;
     private javax.swing.JTextField var1;
     private javax.swing.JTextField var2;
