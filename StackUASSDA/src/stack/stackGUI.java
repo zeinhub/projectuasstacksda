@@ -2,8 +2,10 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+*/
 package stack;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,6 +21,16 @@ public class stackGUI extends javax.swing.JFrame {
      */
     public stackGUI() {
         initComponents();
+        inputcd.setText("");
+        varx.setText(""); note.setVisible(false);
+        vary.setText("");
+        var1.setText("");
+        var2.setText("");
+        var3.setText("");
+        var4.setText("");
+        var5.setText("");
+        note.setVisible(false);
+        
     }
 
     /**
@@ -30,10 +42,9 @@ public class stackGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        page = new javax.swing.JPanel();
         note = new javax.swing.JLabel();
         cek = new javax.swing.JLabel();
-        pop = new javax.swing.JLabel();
         inputcd = new javax.swing.JTextField();
         top = new javax.swing.JLabel();
         ar = new javax.swing.JLabel();
@@ -45,58 +56,112 @@ public class stackGUI extends javax.swing.JFrame {
         var3 = new javax.swing.JTextField();
         var1 = new javax.swing.JTextField();
         var2 = new javax.swing.JTextField();
+        push = new javax.swing.JPanel();
+        pop = new javax.swing.JPanel();
         layer = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        page.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         note.setFont(new java.awt.Font("Lucida Sans", 1, 24)); // NOI18N
         note.setForeground(new java.awt.Color(0, 0, 128));
         note.setText("FULL");
-        jPanel1.add(note, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 210, -1, -1));
-        jPanel1.add(cek, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 420, 50));
-        jPanel1.add(pop, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 250, 60));
-        jPanel1.add(inputcd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 120, 50));
-        jPanel1.add(top, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, 270, 40));
-        jPanel1.add(ar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 270, 40));
+        page.add(note, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 210, -1, -1));
+        page.add(cek, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 420, 50));
+
+        inputcd.setOpaque(false);
+        page.add(inputcd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 120, 50));
+        page.add(top, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, 270, 40));
+        page.add(ar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 270, 40));
 
         vary.setEditable(false);
-        jPanel1.add(vary, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 110, 70, 50));
+        page.add(vary, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 110, 70, 50));
 
         varx.setEditable(false);
-        jPanel1.add(varx, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 70, 50));
+        page.add(varx, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 70, 50));
 
         var6.setEditable(false);
-        jPanel1.add(var6, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 470, 60, 50));
+        page.add(var6, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 470, 60, 50));
 
         var5.setEditable(false);
-        jPanel1.add(var5, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 410, 60, 50));
+        page.add(var5, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 410, 60, 50));
 
         var4.setEditable(false);
-        jPanel1.add(var4, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 340, 60, 50));
+        page.add(var4, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 340, 60, 50));
 
         var3.setEditable(false);
-        jPanel1.add(var3, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 270, 60, 50));
+        page.add(var3, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 270, 60, 50));
 
         var1.setEditable(false);
-        jPanel1.add(var1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 110, 70, 50));
+        page.add(var1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 110, 70, 50));
 
         var2.setEditable(false);
-        jPanel1.add(var2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 200, 60, 50));
+        page.add(var2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 200, 60, 50));
+
+        push.setOpaque(false);
+        push.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pushMouseClicked(evt);
+            }
+        });
+        push.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        page.add(push, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 250, 50));
+
+        pop.setOpaque(false);
+        page.add(pop, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 250, 60));
 
         layer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stack/layer2.png"))); // NOI18N
-        jPanel1.add(layer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        page.add(layer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stack/bg2.jpg"))); // NOI18N
-        jPanel1.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        page.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 610));
+        getContentPane().add(page, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 610));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void pushMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pushMouseClicked
+        // TODO add your handling code here:
+        String data = inputcd.getText();
+        String a1 = varx.getText(); 
+        String a2 = vary.getText(); 
+        String b = var1.getText(); 
+        String c = var2.getText(); 
+        String d = var3.getText(); 
+        String e = var3.getText(); 
+        String f = var4.getText(); 
+        if (data.equals("")){
+       JOptionPane.showMessageDialog(null,"masukkan data!"); 
+       
+        }else {
+            Thread th = new Thread(){
+                @Override
+                public void run(){
+                    try{
+                        for(int a=0; a<=10; a++){
+                            Thread.sleep(500);
+                            if (a==1){run();}
+                            if (a==2){run();}
+                            if (a==3){run();}
+                            if (a==4){run();}
+                            if (a==4){run();}
+                            if (a==5){run();}
+                            if (a==6){run();}
+                        }
+                    }catch(Exception ex){
+                                System.out.println(ex);
+                                }
+                }
+                
+                
+            };th.start();
+        }
+        
+    }//GEN-LAST:event_pushMouseClicked
 
     /**
      * @param args the command line arguments
@@ -138,10 +203,11 @@ public class stackGUI extends javax.swing.JFrame {
     private javax.swing.JLabel bg;
     private javax.swing.JLabel cek;
     private javax.swing.JTextField inputcd;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel layer;
     private javax.swing.JLabel note;
-    private javax.swing.JLabel pop;
+    private javax.swing.JPanel page;
+    private javax.swing.JPanel pop;
+    private javax.swing.JPanel push;
     private javax.swing.JLabel top;
     private javax.swing.JTextField var1;
     private javax.swing.JTextField var2;
