@@ -1,0 +1,4 @@
+DAFTAR PROGRESS (Kalo udah selesai ngedit, diisi progressnya dibawah)
+06/02/2020 - Penambahan form daftar menu, form tentang pembuat, penambahan tombol home dan close.
+semua tombol yang berhubungan dengan design sudah aktif(close, home, tentang pembuat,tutup program, pop/push(di form home)
+yang belum aktif tombol yg berhubungan dengan pemrosesan(di form StackGUI)|Zein.

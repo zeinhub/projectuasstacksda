@@ -57,7 +57,9 @@ public class stackGUI extends javax.swing.JFrame {
         var1 = new javax.swing.JTextField();
         var2 = new javax.swing.JTextField();
         push = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         pop = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         layer = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
@@ -73,7 +75,7 @@ public class stackGUI extends javax.swing.JFrame {
         page.add(cek, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 420, 50));
 
         inputcd.setOpaque(false);
-        page.add(inputcd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 120, 50));
+        page.add(inputcd, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 130, 70));
         page.add(top, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, 270, 40));
         page.add(ar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 270, 40));
 
@@ -110,8 +112,27 @@ public class stackGUI extends javax.swing.JFrame {
         push.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         page.add(push, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 250, 50));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stack/homee.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        page.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 180, 100, 90));
+
         pop.setOpaque(false);
         page.add(pop, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 250, 60));
+
+        jLabel2.setBackground(new java.awt.Color(255, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("X");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        page.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 0, 40, 50));
 
         layer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stack/layer2.png"))); // NOI18N
         page.add(layer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -163,6 +184,17 @@ public class stackGUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_pushMouseClicked
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        new home().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -203,6 +235,8 @@ public class stackGUI extends javax.swing.JFrame {
     private javax.swing.JLabel bg;
     private javax.swing.JLabel cek;
     private javax.swing.JTextField inputcd;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel layer;
     private javax.swing.JLabel note;
     private javax.swing.JPanel page;
