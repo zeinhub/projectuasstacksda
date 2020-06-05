@@ -11,7 +11,7 @@ package stack;
  */
 public class Stack {
     public static void main(String[] args) {
-        stackGUI launch = new stackGUI();
+        home launch = new home();
         launch.setVisible(true);
         
     }
