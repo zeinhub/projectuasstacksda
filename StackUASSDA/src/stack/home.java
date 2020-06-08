@@ -67,7 +67,7 @@ public class home extends javax.swing.JFrame {
         pushpop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(pushpop, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 300, 80));
 
-        bg.setIcon(new javax.swing.ImageIcon("C:\\Users\\AWIEZ FATHWA ZEIN\\Documents\\StackUASSDA\\Home.jpg")); // NOI18N
+        bg.setIcon(new javax.swing.ImageIcon("C:\\Users\\AWIEZ FATHWA ZEIN\\Documents\\StackUASSDA\\src\\stack\\Home.jpg")); // NOI18N
         jPanel1.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 610));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
